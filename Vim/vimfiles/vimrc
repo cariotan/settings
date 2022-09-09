@@ -1,0 +1,66 @@
+call plug#begin()
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dense-analysis/ale'
+call plug#end()
+
+"The look"
+set termguicolors
+let g:codedark_conservative=0
+let g:airline_theme = 'murmur'
+colorscheme palenight
+
+"Essential"
+filetype indent plugin on
+syntax on
+
+"Basic settings"
+set incsearch
+set ignorecase
+set smartcase
+set splitbelow
+set splitright
+set tabstop=4
+set shiftwidth=4
+set belloff=all
+set backspace=indent,eol,start
+set path+=**
+set wildmenu
+set hidden
+set noswapfile
+set number
+set relativenumber
+set linebreak
+
+"Remove scrollbar"
+:set guioptions-=L
+
+"Don't tab complete certain files/directories
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico,*.csproj
+set wildignore+=*.pdf,*.psd
+set wildignore+=node_modules/*,bower_components/*,*/obj/*,*/bin/*
+
+"Disable parantheses match highlight"
+let g:loaded_matchparen=1
+
+"Netrw plugin"
+let g:netrw_banner=0
+let g:netrw_fastbrowse=2
+let g:netrw_keepdir=1
+let g:netrw_altv=1
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 20
+autocmd FileType netrw setl bufhidden=wipe
+
+"GUI stuff"
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+
+set lines=38 columns=148
+
+if !has('nvim')
+	set guifont=Consolas:h11:cANSI:qDRAFT
+	set guicursor+=a:blinkon0
+endif
