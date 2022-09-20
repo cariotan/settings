@@ -9,7 +9,7 @@ call plug#end()
 set termguicolors
 let g:codedark_conservative=0
 let g:airline_theme = 'murmur'
-colorscheme palenight
+colorscheme codedark
 
 "Essential"
 filetype indent plugin on
