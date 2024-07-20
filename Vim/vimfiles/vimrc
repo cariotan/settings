@@ -64,3 +64,6 @@ if !has('nvim')
 	set guifont=Consolas:h11:cANSI:qDRAFT
 	set guicursor+=a:blinkon0
 endif
+
+set clipboard=unnamedplus
+set clipboard=unnamed
