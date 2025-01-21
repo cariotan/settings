@@ -64,3 +64,12 @@ if !has('nvim')
 	set guifont=Consolas:h11:cANSI:qDRAFT
 	set guicursor+=a:blinkon0
 endif
+
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$
+
+noremap gl $
+noremap gh ^
+
