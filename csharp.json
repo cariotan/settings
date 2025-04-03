@@ -6,6 +6,13 @@
 		],
 		"description": "Insert inline C# raw string literal"
 	},
+	"Inline raw string literal for paths": {
+		"prefix": "rr",
+		"body": [
+			"\"\"$0\"\";"
+		],
+		"description": "Insert inline C# raw string literal"
+	},
 	"new object initializer": {
 		"prefix": "newo",
 		"body": [
